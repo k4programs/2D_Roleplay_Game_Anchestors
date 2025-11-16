@@ -6,18 +6,24 @@ func _ready():
 	interactable.connect("interacted", Callable(self, "_on_interacted"))
 
 func _on_interacted():
-	var player_companion = Companion.new()
-	player_companion.name = "Player Companion"
-	player_companion.texture = preload("res://assets/art/ui/icon.svg")
-	player_companion.max_hp = 20
-	player_companion.hp = 20
-	player_companion.attack = 5
+	var player_team = []
+	for i in range(3):
+		var companion = Companion.new()
+		companion.name = "Player Companion " + str(i + 1)
+		companion.texture = preload("res://assets/art/ui/icon.svg")
+		companion.max_hp = 20 + i * 5
+		companion.hp = companion.max_hp
+		companion.attack = 5 + i * 2
+		player_team.append(companion)
 
-	var enemy_companion = Companion.new()
-	enemy_companion.name = "Enemy Companion"
-	enemy_companion.texture = preload("res://assets/art/ui/icon.svg")
-	enemy_companion.max_hp = 15
-	enemy_companion.hp = 15
-	enemy_companion.attack = 3
+	var enemy_team = []
+	for i in range(3):
+		var companion = Companion.new()
+		companion.name = "Enemy Companion " + str(i + 1)
+		companion.texture = preload("res://assets/art/ui/icon.svg")
+		companion.max_hp = 15 + i * 5
+		companion.hp = companion.max_hp
+		companion.attack = 3 + i * 2
+		enemy_team.append(companion)
 	
-	BattleManager.start_battle([player_companion], [enemy_companion])
+	BattleManager.start_battle(player_team, enemy_team)

@@ -5,32 +5,96 @@
 [node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_abcde")
 
-[node name="Player" type="Node2D" parent="."]
+[node name="Player1" type="Node2D" parent="."]
 position = Vector2(200, 300)
 
-[node name="Sprite" type="TextureRect" parent="Player"]
+[node name="Sprite" type="TextureRect" parent="Player1"]
 offset_right = 128.0
 offset_bottom = 128.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HPLabel" type="Label" parent="Player"]
+[node name="HPLabel" type="Label" parent="Player1"]
 offset_top = 140.0
 offset_right = 128.0
 offset_bottom = 163.0
 text = "HP: 10/10"
 horizontal_alignment = 1
 
-[node name="Enemy" type="Node2D" parent="."]
-position = Vector2(800, 100)
+[node name="Player2" type="Node2D" parent="."]
+position = Vector2(350, 300)
 
-[node name="Sprite" type="TextureRect" parent="Enemy"]
+[node name="Sprite" type="TextureRect" parent="Player2"]
 offset_right = 128.0
 offset_bottom = 128.0
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HPLabel" type="Label" parent="Enemy"]
+[node name="HPLabel" type="Label" parent="Player2"]
+offset_top = 140.0
+offset_right = 128.0
+offset_bottom = 163.0
+text = "HP: 10/10"
+horizontal_alignment = 1
+
+[node name="Player3" type="Node2D" parent="."]
+position = Vector2(500, 300)
+
+[node name="Sprite" type="TextureRect" parent="Player3"]
+offset_right = 128.0
+offset_bottom = 128.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="Player3"]
+offset_top = 140.0
+offset_right = 128.0
+offset_bottom = 163.0
+text = "HP: 10/10"
+horizontal_alignment = 1
+
+[node name="Enemy1" type="Node2D" parent="."]
+position = Vector2(800, 100)
+
+[node name="Sprite" type="TextureRect" parent="Enemy1"]
+offset_right = 128.0
+offset_bottom = 128.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="Enemy1"]
+offset_top = 140.0
+offset_right = 128.0
+offset_bottom = 163.0
+text = "HP: 10/10"
+horizontal_alignment = 1
+
+[node name="Enemy2" type="Node2D" parent="."]
+position = Vector2(950, 100)
+
+[node name="Sprite" type="TextureRect" parent="Enemy2"]
+offset_right = 128.0
+offset_bottom = 128.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="Enemy2"]
+offset_top = 140.0
+offset_right = 128.0
+offset_bottom = 163.0
+text = "HP: 10/10"
+horizontal_alignment = 1
+
+[node name="Enemy3" type="Node2D" parent="."]
+position = Vector2(1100, 100)
+
+[node name="Sprite" type="TextureRect" parent="Enemy3"]
+offset_right = 128.0
+offset_bottom = 128.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPLabel" type="Label" parent="Enemy3"]
 offset_top = 140.0
 offset_right = 128.0
 offset_bottom = 163.0
