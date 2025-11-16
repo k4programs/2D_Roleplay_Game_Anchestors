@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://h1h2h3h4h5h6"]
+
+[ext_resource type="Script" path="res://scripts/battle/battle_trigger.gd" id="1_aaaaa"]
+[ext_resource type="Texture2D" uid="uid://d1x2y3z4w5" path="res://assets/art/ui/icon.svg" id="2_bbbbb"]
+[ext_resource type="PackedScene" uid="uid://c1c2c3c4c5c6" path="res://scenes/interactable.tscn" id="3_ccccc"]
+
+[node name="BattleTrigger" type="Node2D"]
+script = ExtResource("1_aaaaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.375)
+texture = ExtResource("2_bbbbb")
+modulate = Color(1, 0, 0, 1)
+
+[node name="Interactable" parent="." instance=ExtResource("3_ccccc")]

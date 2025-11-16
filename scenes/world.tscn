@@ -41,5 +41,10 @@ position = Vector2(100, 80)
 [node name="NPC" parent="." instance=ExtResource("3_ddddd")]
 position = Vector2(200, 80)
 
+[ext_resource type="PackedScene" uid="uid://h1h2h3h4h5h6" path="res://scenes/battle_trigger.tscn" id="5_fffff"]
+
 [node name="InventoryUI" parent="." instance=ExtResource("4_eeeee")]
+
+[node name="BattleTrigger" parent="." instance=ExtResource("5_fffff")]
+position = Vector2(300, 80)
 
