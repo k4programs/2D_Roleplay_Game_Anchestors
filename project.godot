@@ -1,0 +1,22 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters might change in the future.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Projekt Sonnenwende-Gefährten"
+config/description="Ein 2D-Top-Down-Rollenspiel, das den Farm- und Sozial-Charme von Stardew Valley mit der tiefgehenden Mechanik des Anfreundens, Trainierens und Entwickelns von magischen Kreaturen (genannt 'Gefährten') verbindet. Es ist ein 'Cozy RPG' ohne harten 'Game Over'-Zustand, das auf emotionale Bindung, Erkundung und Selbstausdruck setzt."
+config/version="0.1.0"
+config/icon="res://icon.svg"
+run/main_scene="res://main.tscn"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

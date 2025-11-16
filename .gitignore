@@ -1,0 +1,12 @@
+# Godot-specific ignores
+.godot/
+!.godot/user_settings.tres
+!.godot/path_remap.cfg
+export.cfg
+export_presets.cfg
+*.translation
+*.remap
+*.import
+
+# Mono-specific ignores
+.mono/
