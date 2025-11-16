@@ -1,0 +1,6 @@
+[gd_resource type="NPCData" load_steps=1 format=3 uid="uid://npc13"]
+
+[resource]
+npc_name = "NPC13"
+relationship_level = 0
+preferences = []
