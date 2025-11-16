@@ -8,3 +8,5 @@ texture = ExtResource("1_icon")
 max_hp = 56
 hp = 56
 attack = 13
+defense = 8
+speed = 6

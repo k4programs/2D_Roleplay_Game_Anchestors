@@ -12,42 +12,61 @@ func setup_battle(player_team: Array[Companion], enemy_team: Array[Companion]):
 	update_ui()
 
 func _on_attack_button_pressed():
-	# Player's turn
 	if player_companions.size() > 0 and enemy_companions.size() > 0:
-		var player_companion = player_companions[0]
-		var enemy_companion = enemy_companions[0]
-		
-		enemy_companion.hp -= player_companion.attack
-		print("Player attacks! Enemy HP: " + str(enemy_companion.hp))
-		
-		if enemy_companion.hp <= 0:
-			enemy_companions.remove_at(0)
-			print("Enemy companion defeated!")
+		var turn_order = get_turn_order()
+		for companion in turn_order:
+			if companion in player_companions:
+				var target = get_random_enemy()
+				if target:
+					attack(companion, target)
+			else:
+				var target = get_random_player_companion()
+				if target:
+					attack(companion, target)
+			
+			if is_battle_over():
+				return
 
-	update_ui()
+func get_turn_order() -> Array[Companion]:
+	var all_companions = player_companions + enemy_companions
+	all_companions.sort_custom(func(a, b): return a.speed > b.speed)
+	return all_companions
+
+func get_random_enemy() -> Companion:
+	if enemy_companions.size() > 0:
+		return enemy_companions[randi() % enemy_companions.size()]
+	return null
+
+func get_random_player_companion() -> Companion:
+	if player_companions.size() > 0:
+		return player_companions[randi() % player_companions.size()]
+	return null
+
+func attack(attacker: Companion, defender: Companion):
+	var damage = max(1, attacker.attack - defender.defense)
+	defender.hp -= damage
+	print(attacker.name + " attacks " + defender.name + " for " + str(damage) + " damage!")
 	
-	if enemy_companions.size() == 0:
-		print("You win!")
-		BattleManager.end_battle()
-		return
-
-	# Enemy's turn
-	if player_companions.size() > 0 and enemy_companions.size() > 0:
-		var player_companion = player_companions[0]
-		var enemy_companion = enemy_companions[0]
-
-		player_companion.hp -= enemy_companion.attack
-		print("Enemy attacks! Player HP: " + str(player_companion.hp))
-
-		if player_companion.hp <= 0:
-			player_companions.remove_at(0)
-			print("Player companion defeated!")
+	if defender.hp <= 0:
+		if defender in player_companions:
+			player_companions.erase(defender)
+			print(defender.name + " was defeated!")
+		else:
+			enemy_companions.erase(defender)
+			print(defender.name + " was defeated!")
 	
 	update_ui()
 
+func is_battle_over() -> bool:
 	if player_companions.size() == 0:
 		print("You lose!")
 		BattleManager.end_battle()
+		return true
+	elif enemy_companions.size() == 0:
+		print("You win!")
+		BattleManager.end_battle()
+		return true
+	return false
 
 func update_ui():
 	for i in range(player_slots.size()):
