@@ -7,6 +7,10 @@ export_presets.cfg
 *.translation
 *.remap
 *.import
+*.uid
+
+# Executables
+*.exe
 
 # Mono-specific ignores
 .mono/

@@ -1,17 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dklabs56s2s2"]
+[gd_scene load_steps=8 format=3 uid="uid://abc123def456"]
 
-[ext_resource type="PackedScene" uid="uid://b7v4yv4v4v4v" path="res://scenes/player.tscn" id="1_aaaaa"]
-[ext_resource type="Texture2D" uid="uid://d2x3y4z5w6" path="res://assets/art/tilesets/placeholder_tileset.svg" id="2_bbbbb"]
+[ext_resource type="PackedScene" uid="uid://bca321fed654" path="res://scenes/player.tscn" id="1_a"]
+[ext_resource type="Texture2D" uid="uid://dcb432gfe543" path="res://assets/art/tilesets/placeholder_tileset.svg" id="2_b"]
+[ext_resource type="PackedScene" uid="uid://cba543ihg654" path="res://scenes/npc.tscn" id="3_c"]
+[ext_resource type="PackedScene" uid="uid://acb654jih765" path="res://scenes/ui/inventory_ui.tscn" id="4_d"]
+[ext_resource type="PackedScene" uid="uid://bca765kji876" path="res://scenes/battle_trigger.tscn" id="5_e"]
 
-[ext_resource type="PackedScene" uid="uid://d1d2d3d4d5d6" path="res://scenes/npc.tscn" id="3_ddddd"]
-[ext_resource type="PackedScene" uid="uid://f1f2f3f4f5f6" path="res://scenes/ui/inventory_ui.tscn" id="4_eeeee"]
-
-[sub_resource type="TileSet" id="TileSet_12345"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_54321")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_54321"]
-texture = ExtResource("2_bbbbb")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1"]
+texture = ExtResource("2_b")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -25,26 +21,27 @@ texture_region_size = Vector2i(32, 32)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSet" id="TileSet_2"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_1")
+
 
 [node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_12345")
+tile_set = SubResource("TileSet_2")
 format = 2
 layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0)
 
 
-[node name="Player" parent="." instance=ExtResource("1_aaaaa")]
+[node name="Player" parent="." instance=ExtResource("1_a")]
 position = Vector2(100, 80)
 
-[node name="NPC" parent="." instance=ExtResource("3_ddddd")]
+[node name="NPC" parent="." instance=ExtResource("3_c")]
 position = Vector2(200, 80)
 
-[ext_resource type="PackedScene" uid="uid://h1h2h3h4h5h6" path="res://scenes/battle_trigger.tscn" id="5_fffff"]
+[node name="InventoryUI" parent="." instance=ExtResource("4_d")]
 
-[node name="InventoryUI" parent="." instance=ExtResource("4_eeeee")]
-
-[node name="BattleTrigger" parent="." instance=ExtResource("5_fffff")]
+[node name="BattleTrigger" parent="." instance=ExtResource("5_e")]
 position = Vector2(300, 80)
-
