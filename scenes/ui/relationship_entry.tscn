@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://r1r2r3r4r5r6"]
+
+[ext_resource type="Script" path="res://scripts/ui/relationship_entry.gd" id="1_abcde"]
+
+[node name="RelationshipEntry" type="HBoxContainer"]
+script = ExtResource("1_abcde")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "NPC Name"
+
+[node name="HeartTexture" type="TextureRect" parent="."]
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5

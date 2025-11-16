@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var npc_data: NPCData
+
 @onready var interactable = $Interactable
 
 func _ready():

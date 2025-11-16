@@ -61,4 +61,8 @@ position = Vector2(400, 80)
 
 [node name="MinimapUI" parent="." instance=ExtResource("8_h")]
 
+[ext_resource type="PackedScene" uid="uid://s1s2s3s4s5s6" path="res://scenes/ui/relationship_ui.tscn" id="10_j"]
+
 [node name="SkillTreeUI" parent="." instance=ExtResource("9_i")]
+
+[node name="RelationshipUI" parent="." instance=ExtResource("10_j")]
