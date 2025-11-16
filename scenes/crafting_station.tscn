@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://k1k2k3k4k5k6"]
+
+[ext_resource type="Script" path="res://scripts/inventory/crafting_station.gd" id="1_aaaaa"]
+[ext_resource type="Texture2D" uid="uid://d1x2y3z4w5" path="res://assets/art/ui/icon.svg" id="2_bbbbb"]
+[ext_resource type="PackedScene" uid="uid://c1c2c3c4c5c6" path="res://scenes/interactable.tscn" id="3_ccccc"]
+[ext_resource type="PackedScene" uid="uid://j1j2j3j4j5j6" path="res://scenes/ui/crafting_ui.tscn" id="4_ddddd"]
+
+[node name="CraftingStation" type="Node2D"]
+script = ExtResource("1_aaaaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bbbbb")
+modulate = Color(0, 1, 0, 1)
+
+[node name="Interactable" parent="." instance=ExtResource("3_ccccc")]
+
+[node name="CraftingUI" parent="." instance=ExtResource("4_ddddd")]

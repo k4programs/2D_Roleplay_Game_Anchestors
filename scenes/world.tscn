@@ -43,5 +43,10 @@ position = Vector2(200, 80)
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_d")]
 
+[ext_resource type="PackedScene" uid="uid://k1k2k3k4k5k6" path="res://scenes/crafting_station.tscn" id="6_f"]
+
 [node name="BattleTrigger" parent="." instance=ExtResource("5_e")]
 position = Vector2(300, 80)
+
+[node name="CraftingStation" parent="." instance=ExtResource("6_f")]
+position = Vector2(400, 80)

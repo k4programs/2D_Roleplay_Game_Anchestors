@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://i1i2i3i4i5i6"]
+
+[ext_resource type="Script" path="res://scripts/ui/recipe_entry.gd" id="1_abcde"]
+
+[node name="RecipeEntry" type="HBoxContainer"]
+script = ExtResource("1_abcde")
+
+[node name="IngredientsLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ingredients: "
+
+[node name="ResultLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Result: "
+
+[node name="CraftButton" type="Button" parent="."]
+layout_mode = 2
+text = "Craft"
+
+[connection signal="pressed" from="CraftButton" to="." method="_on_craft_button_pressed"]

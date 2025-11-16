@@ -22,6 +22,7 @@ config/icon="res://assets/art/ui/icon.svg"
 DialogManager="*res://scripts/dialog_manager.gd"
 InventoryManager="*res://scripts/inventory/inventory_manager.gd"
 BattleManager="*res://scripts/battle/battle_manager.gd"
+CraftingManager="*res://scripts/inventory/crafting_manager.gd"
 
 [input]
 
