@@ -16,6 +16,10 @@ config/version="0.1.0"
 config/icon="res://assets/art/ui/icon.svg"
 run/main_scene="res://scenes/world.tscn"
 
+[autoload]
+
+DialogManager="*res://scripts/dialog_manager.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

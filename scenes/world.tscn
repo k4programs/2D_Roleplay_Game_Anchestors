@@ -32,5 +32,10 @@ layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0)
 
 
+[ext_resource type="PackedScene" uid="uid://d1d2d3d4d5d6" path="res://scenes/npc.tscn" id="3_ddddd"]
+
 [node name="Player" parent="." instance=ExtResource("1_aaaaa")]
 position = Vector2(100, 80)
+
+[node name="NPC" parent="." instance=ExtResource("3_ddddd")]
+position = Vector2(200, 80)
