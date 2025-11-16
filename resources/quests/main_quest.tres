@@ -1,0 +1,8 @@
+[gd_resource type="Quest" load_steps=1 format=3 uid="uid://main_quest"]
+
+[resource]
+quest_name = "Die Dissonanz"
+description = "Finde die Ursache der Dissonanz, die die Gefährten beunruhigt."
+objectives = ["Erreiche den Flüsterwald", "Finde den ersten Schrein", "Aktiviere den Schrein"]
+rewards = []
+status = 0

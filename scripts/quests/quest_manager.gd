@@ -6,6 +6,10 @@ var completed_quests: Array[Quest] = []
 signal quest_added(quest: Quest)
 signal quest_completed(quest: Quest)
 
+func _ready():
+	var main_quest = load("res://resources/quests/main_quest.tres")
+	add_quest(main_quest)
+
 func add_quest(quest: Quest):
 	if not active_quests.has(quest) and not completed_quests.has(quest):
 		quest.status = Quest.QuestStatus.ACTIVE

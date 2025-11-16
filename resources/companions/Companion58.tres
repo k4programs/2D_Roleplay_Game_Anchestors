@@ -1,0 +1,10 @@
+[gd_resource type="Companion" load_steps=2 format=3 uid="uid://comp58"]
+
+[ext_resource type="Texture2D" uid="uid://d1x2y3z4w5" path="res://assets/art/ui/icon.svg" id="1_icon"]
+
+[resource]
+name = "Companion58"
+texture = ExtResource("1_icon")
+max_hp = 126
+hp = 126
+attack = 31

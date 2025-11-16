@@ -1,6 +1,17 @@
-[gd_resource type="NPCData" load_steps=1 format=3 uid="uid://npc1"]
+[gd_resource type="NPCData" load_steps=3 format=3 uid="uid://npc1"]
+
+[ext_resource type="Script" path="res://scripts/npcs/npc_data.gd" id="0_npc_data"]
+[ext_resource type="Script" path="res://scripts/dialog/dialog.gd" id="1_dialog"]
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("1_dialog")
+character_name = "NPC1"
+text = "Hallo! Willkommen im Dorf."
+choices = []
 
 [resource]
+script = ExtResource("0_npc_data")
 npc_name = "NPC1"
 relationship_level = 0
 preferences = []
+dialog_tree = SubResource("1")
