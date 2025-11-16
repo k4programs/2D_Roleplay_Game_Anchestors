@@ -6,6 +6,13 @@ func _ready():
 	interactable.connect("interacted", Callable(self, "_on_interacted"))
 
 func _on_interacted():
+	var quest = Quest.new()
+	quest.quest_name = "Finde den verlorenen Gegenstand"
+	quest.description = "Jemand hat einen wichtigen Gegenstand verloren. Finde ihn!"
+	quest.objectives = ["Finde den Gegenstand", "Bringe den Gegenstand zurück zum NPC"]
+	
+	QuestManager.add_quest(quest)
+
 	var dialog_end = Dialog.new()
 	dialog_end.character_name = "NPC"
 	dialog_end.text = "Auf Wiedersehen!"
@@ -20,7 +27,7 @@ func _on_interacted():
 
 	var dialog_start = Dialog.new()
 	dialog_start.character_name = "NPC"
-	dialog_start.text = "Hallo! Was kann ich für dich tun?"
+	dialog_start.text = "Hallo! Was kann ich für dich tun? Ich habe eine Quest für dich!"
 	dialog_start.choices = [choice1, choice2]
 	
 	DialogManager.show_dialog(dialog_start)

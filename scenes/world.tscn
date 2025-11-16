@@ -48,5 +48,9 @@ position = Vector2(200, 80)
 [node name="BattleTrigger" parent="." instance=ExtResource("5_e")]
 position = Vector2(300, 80)
 
+[ext_resource type="PackedScene" uid="uid://m1m2m3m4m5m6" path="res://scenes/ui/quest_log_ui.tscn" id="7_g"]
+
 [node name="CraftingStation" parent="." instance=ExtResource("6_f")]
 position = Vector2(400, 80)
+
+[node name="QuestLogUI" parent="." instance=ExtResource("7_g")]

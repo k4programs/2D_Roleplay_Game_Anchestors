@@ -23,12 +23,18 @@ DialogManager="*res://scripts/dialog_manager.gd"
 InventoryManager="*res://scripts/inventory/inventory_manager.gd"
 BattleManager="*res://scripts/battle/battle_manager.gd"
 CraftingManager="*res://scripts/inventory/crafting_manager.gd"
+QuestManager="*res://scripts/quests/quest_manager.gd"
 
 [input]
 
 ui_inventory={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":73,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ui_quest_log={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":81,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

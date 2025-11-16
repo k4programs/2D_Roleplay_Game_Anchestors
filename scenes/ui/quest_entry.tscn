@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://l1l2l3l4l5l6"]
+
+[ext_resource type="Script" path="res://scripts/ui/quest_entry.gd" id="1_abcde"]
+
+[node name="QuestEntry" type="VBoxContainer"]
+script = ExtResource("1_abcde")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Quest Name"
+
+[node name="DescriptionLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Quest Description"
+autowrap_mode = 2
+
+[node name="ObjectivesLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Objectives:"
+autowrap_mode = 2
