@@ -27,6 +27,7 @@ QuestManager="*res://scripts/quests/quest_manager.gd"
 MapManager="*res://scripts/map/map_manager.gd"
 SkillManager="*res://scripts/skills/skill_manager.gd"
 RelationshipManager="*res://scripts/npcs/relationship_manager.gd"
+TimeManager="*res://scripts/time/time_manager.gd"
 
 [input]
 
