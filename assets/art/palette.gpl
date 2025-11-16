@@ -1,0 +1,46 @@
+GIMP Palette
+Name: Sonnenwende-Gefährten
+Columns: 8
+#
+# Browns / Ocker
+8a5a44	Braun Dunkel
+a26d51	Braun Mittel
+b8815f	Braun Hell
+c8956f	Ocker Dunkel
+d8a97f	Ocker Mittel
+e8bd8f	Ocker Hell
+# Terracotta
+b05c48	Terracotta Dunkel
+c86a54	Terracotta Mittel
+de7860	Terracotta Hell
+# Olive Greens
+58641d	Oliv Dunkel
+6b7823	Oliv Mittel
+818f2d	Oliv Hell
+97a637	Oliv Sehr Hell
+# Accent: Cream-White
+f0e5d8	Creme Weiss
+e6d9c9	Creme
+dccdb9	Creme Dunkel
+# Accent: Sky Blue
+87ceeb	Himmelblau
+a0d6f0	Himmelblau Hell
+b9dff5	Himmelblau Sehr Hell
+# Accent: Lavender
+b2a4d4	Lavendel
+c0b5de	Lavendel Hell
+d6cce8	Lavendel Sehr Hell
+# Greys / Neutrals for UI and effects
+2f2f2f	Dunkelgrau (Höhlen)
+4f4f4f	Mittelgrau
+6f6f6f	Hellgrau
+8f8f8f	Sehr Hellgrau
+# Supporting colors
+4a4e69	Dunkelblau
+9a8c98	Grauviolett
+c9ada7	Rosé-Grau
+f2e9e4	Sehr helles Rosé
+# Highlights / Effects
+ffee32	Bernstein Highlight
+ffd100	Bernstein
+ffb300	Bernstein Dunkel
