@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b7v4yv4v4v4v" path="res://scenes/player.tscn" id="1_aaaaa"]
 [ext_resource type="Texture2D" uid="uid://d2x3y4z5w6" path="res://assets/art/tilesets/placeholder_tileset.svg" id="2_bbbbb"]
 
+[ext_resource type="PackedScene" uid="uid://d1d2d3d4d5d6" path="res://scenes/npc.tscn" id="3_ddddd"]
+[ext_resource type="PackedScene" uid="uid://f1f2f3f4f5f6" path="res://scenes/ui/inventory_ui.tscn" id="4_eeeee"]
+
 [sub_resource type="TileSet" id="TileSet_12345"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_54321")
@@ -32,10 +35,11 @@ layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0)
 
 
-[ext_resource type="PackedScene" uid="uid://d1d2d3d4d5d6" path="res://scenes/npc.tscn" id="3_ddddd"]
-
 [node name="Player" parent="." instance=ExtResource("1_aaaaa")]
 position = Vector2(100, 80)
 
 [node name="NPC" parent="." instance=ExtResource("3_ddddd")]
 position = Vector2(200, 80)
+
+[node name="InventoryUI" parent="." instance=ExtResource("4_eeeee")]
+

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://e1e2e3e4e5e6"]
+
+[node name="InventoryItem" type="Panel"]
+custom_minimum_size = Vector2(50, 50)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand_mode = 1
+stretch_mode = 5
