@@ -24,6 +24,7 @@ InventoryManager="*res://scripts/inventory/inventory_manager.gd"
 BattleManager="*res://scripts/battle/battle_manager.gd"
 CraftingManager="*res://scripts/inventory/crafting_manager.gd"
 QuestManager="*res://scripts/quests/quest_manager.gd"
+MapManager="*res://scripts/map/map_manager.gd"
 
 [input]
 

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://o1o2o3o4o5o6"]
+
+[ext_resource type="Script" path="res://scripts/ui/minimap_ui.gd" id="1_abcde"]
+
+[node name="MinimapUI" type="CanvasLayer"]
+script = ExtResource("1_abcde")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 220.0
+grow_horizontal = 0
+
+[node name="MinimapTexture" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+expand_mode = 1
+stretch_mode = 5
