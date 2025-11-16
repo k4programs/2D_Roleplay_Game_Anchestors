@@ -1,10 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://abc123def456"]
+[gd_scene load_steps=12 format=3 uid="uid://abc123def456"]
 
+[ext_resource type="Script" path="res://scripts/map/world.gd" id="0_l"]
 [ext_resource type="PackedScene" uid="uid://bca321fed654" path="res://scenes/player.tscn" id="1_a"]
 [ext_resource type="Texture2D" uid="uid://dcb432gfe543" path="res://assets/art/tilesets/placeholder_tileset.svg" id="2_b"]
 [ext_resource type="PackedScene" uid="uid://cba543ihg654" path="res://scenes/npc.tscn" id="3_c"]
 [ext_resource type="PackedScene" uid="uid://acb654jih765" path="res://scenes/ui/inventory_ui.tscn" id="4_d"]
 [ext_resource type="PackedScene" uid="uid://bca765kji876" path="res://scenes/battle_trigger.tscn" id="5_e"]
+[ext_resource type="PackedScene" uid="uid://k1k2k3k4k5k6" path="res://scenes/crafting_station.tscn" id="6_f"]
+[ext_resource type="PackedScene" uid="uid://m1m2m3m4m5m6" path="res://scenes/ui/quest_log_ui.tscn" id="7_g"]
+[ext_resource type="PackedScene" uid="uid://o1o2o3o4o5o6" path="res://scenes/ui/minimap_ui.tscn" id="8_h"]
+[ext_resource type="PackedScene" uid="uid://q1q2q3q4q5q6" path="res://scenes/ui/skill_tree_ui.tscn" id="9_i"]
+[ext_resource type="PackedScene" uid="uid://s1s2s3s4s5s6" path="res://scenes/ui/relationship_ui.tscn" id="10_j"]
+[ext_resource type="PackedScene" uid="uid://t1t2t3t4t5t6" path="res://scenes/ui/time_ui.tscn" id="11_k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1"]
 texture = ExtResource("2_b")
@@ -27,6 +34,7 @@ sources/0 = SubResource("TileSetAtlasSource_1")
 
 
 [node name="World" type="Node2D"]
+script = ExtResource("0_l")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2")
@@ -43,29 +51,17 @@ position = Vector2(200, 80)
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_d")]
 
-[ext_resource type="PackedScene" uid="uid://k1k2k3k4k5k6" path="res://scenes/crafting_station.tscn" id="6_f"]
-
 [node name="BattleTrigger" parent="." instance=ExtResource("5_e")]
 position = Vector2(300, 80)
-
-[ext_resource type="PackedScene" uid="uid://m1m2m3m4m5m6" path="res://scenes/ui/quest_log_ui.tscn" id="7_g"]
 
 [node name="CraftingStation" parent="." instance=ExtResource("6_f")]
 position = Vector2(400, 80)
 
-[ext_resource type="PackedScene" uid="uid://o1o2o3o4o5o6" path="res://scenes/ui/minimap_ui.tscn" id="8_h"]
-
 [node name="QuestLogUI" parent="." instance=ExtResource("7_g")]
-
-[ext_resource type="PackedScene" uid="uid://q1q2q3q4q5q6" path="res://scenes/ui/skill_tree_ui.tscn" id="9_i"]
 
 [node name="MinimapUI" parent="." instance=ExtResource("8_h")]
 
-[ext_resource type="PackedScene" uid="uid://s1s2s3s4s5s6" path="res://scenes/ui/relationship_ui.tscn" id="10_j"]
-
 [node name="SkillTreeUI" parent="." instance=ExtResource("9_i")]
-
-[ext_resource type="PackedScene" uid="uid://t1t2t3t4t5t6" path="res://scenes/ui/time_ui.tscn" id="11_k"]
 
 [node name="RelationshipUI" parent="." instance=ExtResource("10_j")]
 

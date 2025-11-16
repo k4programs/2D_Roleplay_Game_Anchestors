@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var target_map: Map
+@export var target_map_name: String = ""
 @export var target_entry_point: String = ""
 
 func _ready():
@@ -8,4 +8,4 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		MapManager.change_map(target_map, target_entry_point)
+		MapManager.change_map(target_map_name, target_entry_point)
