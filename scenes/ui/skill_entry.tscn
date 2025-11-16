@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://p1p2p3p4p5p6"]
+
+[ext_resource type="Script" path="res://scripts/ui/skill_entry.gd" id="1_abcde"]
+
+[node name="SkillEntry" type="HBoxContainer"]
+script = ExtResource("1_abcde")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skill Name"
+
+[node name="DescriptionLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skill Description"
+
+[node name="LearnButton" type="Button" parent="."]
+layout_mode = 2
+text = "Learn"
+
+[connection signal="pressed" from="LearnButton" to="." method="_on_learn_button_pressed"]
