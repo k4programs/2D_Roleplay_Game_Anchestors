@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var speed = 150.0
 @export var skill_points: int = 0

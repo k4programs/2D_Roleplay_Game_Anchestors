@@ -19,7 +19,9 @@ func _input(event):
 			update_ui()
 
 func update_ui():
-	skill_points_label.text = "Skill Points: " + str(Player.skill_points) # Assuming Player is a global singleton or accessible
+	var player = get_tree().get_root().find_child("Player", true, false)
+	if player:
+		skill_points_label.text = "Skill Points: " + str(player.skill_points)
 	
 	for child in skill_tree_container.get_children():
 		child.queue_free()
@@ -36,9 +38,9 @@ func update_ui():
 	skill2.cost = 1
 	
 	var skill_entry1 = skill_entry_scene.instantiate()
-	skill_entry1.set_skill(skill1)
 	skill_tree_container.add_child(skill_entry1)
+	skill_entry1.call_deferred("set_skill", skill1)
 	
 	var skill_entry2 = skill_entry_scene.instantiate()
-	skill_entry2.set_skill(skill2)
 	skill_tree_container.add_child(skill_entry2)
+	skill_entry2.call_deferred("set_skill", skill2)

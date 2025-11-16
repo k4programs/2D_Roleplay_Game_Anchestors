@@ -14,10 +14,14 @@ func set_skill(new_skill: Skill):
 	update_button()
 
 func _on_learn_button_pressed():
-	# Assuming Player is a global singleton or accessible
-	SkillManager.learn_skill(Player, skill)
+	var player = get_tree().get_root().find_child("Player", true, false)
+	if player:
+		SkillManager.learn_skill(player, skill)
 	update_button()
 
 func update_button():
-	# Assuming Player is a global singleton or accessible
-	learn_button.disabled = Player.skill_points < skill.cost or Player.learned_skills.has(skill)
+	var player = get_tree().get_root().find_child("Player", true, false)
+	if player:
+		learn_button.disabled = player.skill_points < skill.cost or player.learned_skills.has(skill)
+	else:
+		learn_button.disabled = true

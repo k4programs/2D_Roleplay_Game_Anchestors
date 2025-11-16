@@ -13,7 +13,8 @@ func _ready():
 	wooden_sword.name = "Wooden Sword"
 	
 	var recipe = Recipe.new()
-	recipe.ingredients = [wood, wood, stone]
+	var ingredients: Array[Item] = [wood, wood, stone]
+	recipe.ingredients = ingredients
 	recipe.result = wooden_sword
 	
 	add_recipe(recipe)
@@ -29,9 +30,22 @@ func add_recipe(recipe: Recipe):
 
 func can_craft(recipe: Recipe) -> bool:
 	var inventory = InventoryManager.inventory
-	for ingredient in recipe.ingredients:
-		if not inventory.items.has(ingredient):
+	var inventory_counts = {}
+	for item in inventory.items:
+		if not inventory_counts.has(item.name):
+			inventory_counts[item.name] = 0
+		inventory_counts[item.name] += 1
+		
+	var recipe_counts = {}
+	for item in recipe.ingredients:
+		if not recipe_counts.has(item.name):
+			recipe_counts[item.name] = 0
+		recipe_counts[item.name] += 1
+	
+	for item_name in recipe_counts:
+		if not inventory_counts.has(item_name) or inventory_counts[item_name] < recipe_counts[item_name]:
 			return false
+			
 	return true
 
 func craft(recipe: Recipe):
