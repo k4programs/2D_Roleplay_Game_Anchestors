@@ -1,5 +1,6 @@
 extends Node
 
+var player_scene = preload("res://scenes/player.tscn") # Explicitly preload Player scene
 var player_skill_tree: SkillTree
 var companion_skill_trees: Dictionary = {} # Dictionary of companion_name: SkillTree
 
